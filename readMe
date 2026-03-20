@@ -1,0 +1,138 @@
+# Mental Health Data Cleaning & Dashboard Project
+
+## Overview
+
+This project demonstrates a simple **ETL (Extract, Transform, Load)** pipeline using Python and a **Streamlit dashboard** to analyze mental health prevalence data across countries and years.
+
+---
+
+## Features
+
+* Extract data from a dataset (`.xls` / CSV format)
+* Clean and transform the data
+* Save cleaned data to `cleaned_data.csv`
+* Interactive Streamlit dashboard
+* Filter data by country and year
+* Visualize trends and statistics
+
+---
+
+## Project Structure
+
+```
+student-data-cleaning/
+│
+├── data_cleaning.py        # ETL pipeline (extract, transform, load)
+├── app.py                  # Streamlit dashboard
+├── cleaned_data.csv        # Output of the pipeline
+├── 1- mental-illnesses-prevalence.xls
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd student-data-cleaning
+```
+
+### 2. Create a virtual environment (optional)
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install pandas streamlit
+```
+
+---
+
+## ▶️ How to Run the Project
+
+### 1. Run the data pipeline
+
+```bash
+python3 data_cleaning.py
+```
+
+This will:
+
+* Extract data
+* Transform (clean) it
+* Generate `cleaned_data.csv`
+
+---
+
+### 2. Run the Streamlit dashboard
+
+```bash
+streamlit run app.py
+```
+
+Then open:
+
+```
+http://localhost:8501
+```
+
+---
+
+## 🧹 ETL Pipeline
+
+### Extract
+
+* Reads the dataset using `pandas.read_csv()`
+
+### Transform
+
+* Cleans column names
+* Removes duplicates
+* Handles missing values
+* Resets index
+
+### Load
+
+* Saves cleaned data to `cleaned_data.csv`
+
+---
+
+## Dashboard Features
+
+* View raw dataset
+* Filter by:
+
+  * Country
+  * Year
+* View summary statistics
+* Interactive charts
+* Select metrics dynamically
+
+---
+
+## Technologies Used
+
+* Python 
+* Pandas 
+* Streamlit 
+
+---
+
+## Notes
+
+* The `.xls` file used in this project is actually a CSV file.
+* Encoding issues are handled using `latin-1`.
+* The dataset may contain missing or malformed rows, which are handled during transformation.
+
+---
+
+## 👤 Author
+
+* Elsie Msiza
